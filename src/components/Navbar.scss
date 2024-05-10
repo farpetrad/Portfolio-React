@@ -1,0 +1,18 @@
+#navbar-component {
+    nav {
+      &.navbar {
+        .navbar-header {
+          max-height: 64px;
+  
+          .navbar-brand {
+            max-width: 78px;
+            max-height: 78px;
+            min-width: 64px;
+            min-height: 64px;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+  

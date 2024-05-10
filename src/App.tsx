@@ -1,26 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import './scss/site.scss';
+import { Navbar } from './components/Navbar';
+import { NavItem, NavItemProps } from './components/NavItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function App() {
+type NavItemType = NavItemProps & { icon?: IconDefinition, alt?: string; };
+
+export const App: React.FC = (): JSX.Element => {
+  const navItems: NavItemType[] = [
+    { 
+      href: "#skills", label: "Skills",
+    },
+    { 
+      href: "#projects", label: "Projects",
+    },
+    { 
+      href: "#about-me", label: "About",
+    },
+    { 
+      href: "#contact", label: "Contact",
+    },
+    {
+      href: "https://www.linkedin.com/in/neal-c-2749305b/",
+      label: "LinkedIn",
+      target: "_blank",
+      icon: faLinkedin,
+      alt: "LinkedIn icon",
+    },
+    {
+      href: "https://github.com/farpetrad/Portfolio",
+      label: "Github",
+      target: "_blank",
+      icon: faGithub,
+      alt: "GitHub icon",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" id="app">
+      <Navbar>
+        {navItems.map((n: NavItemType) => { 
+          return n.icon ? 
+            <NavItem href={n.href} label={n.label} >
+              <FontAwesomeIcon icon={n.icon} size="2x" />
+            </NavItem> 
+            : <NavItem href={n.href} label={n.label} ></NavItem>;
+        })}
+      </Navbar>
+      <div id="wrap">
+        <div className='main'></div>
+      </div>
     </div>
   );
 }
 
-export default App;
+
