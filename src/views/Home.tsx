@@ -2,6 +2,8 @@ import React from 'react';
 import { faComputerMouseScrollwheel } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AboutBox } from '../components/AboutBox';
+import { HeadlineBox } from '../components/HeadlineBox';
+import { ExperienceBox } from '../components/ExperienceBox';
 import './Home.scss';
 import ArrowDown from "../assets/Arrow 1.svg"
 
@@ -13,10 +15,10 @@ export const HomeView: React.FC = (): JSX.Element => {
                     <div><AboutBox /></div>
                 </div>
                 <div className="col-10 col-md-6 text-start">
-                    <div>Hello</div>
+                    <HeadlineBox />
                 </div>
                 <div className="col-sm-10 offset-sm-1 offset-xxl-0 col-md-4 col-xxl-2">
-                    <div>Hello</div>
+                    <ExperienceBox />
                 </div>
             </div>
             <div className="row mouse">
