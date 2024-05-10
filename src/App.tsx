@@ -3,6 +3,7 @@ import './App.scss';
 import './scss/site.scss';
 import { Navbar } from './components/Navbar';
 import { NavItem, NavItemProps } from './components/NavItem';
+import { HomeView } from './views/Home';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -48,8 +49,11 @@ export const App: React.FC = (): JSX.Element => {
             : <NavItem href={n.href} label={n.label} ></NavItem>;
         })}
       </Navbar>
+      
       <div id="wrap">
-        <div className='main'></div>
+        <div className='main'>
+          <HomeView />
+        </div>
       </div>
     </div>
   );

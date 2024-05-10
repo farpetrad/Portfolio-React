@@ -1,0 +1,31 @@
+@import "../scss/bootstrap.scss";
+.about_box {
+    border-radius: 80px 0px 80px 0px;
+    border: solid 4px black;
+    border-width: 2px;
+    background-color: $primary;
+    filter: drop-shadow(-4px -4px 2px $secondary);
+    padding: 15px;
+    min-height: 45vh;
+  
+    .img-cropped {
+      margin-top: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    h4 {
+      color: white;
+    }
+    h5 {
+      color: white;
+    }
+    .content-item {
+      margin-left: 10px;
+      color: white;
+    }
+    .skill {
+      color: #044458;
+      background-color: $secondary;
+    }
+  }
