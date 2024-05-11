@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AboutBox } from '../components/AboutBox';
 import { HeadlineBox } from '../components/HeadlineBox';
 import { ExperienceBox } from '../components/ExperienceBox';
+import { SkillsContainer } from '../components/SkillsContainer';
 import './Home.scss';
 import ArrowDown from "../assets/Arrow 1.svg"
 
 export const HomeView: React.FC = (): JSX.Element => {
     return (
+        <>
         <div className="home container-fluid sitepage" style={{ alignContent: 'center'}}>
             <div className="row mt-5">
                 <div className="offset-sm-1 col-sm-10 col-md-4 col-xxl-2">
@@ -37,5 +39,12 @@ export const HomeView: React.FC = (): JSX.Element => {
                 </div>
             </div>
         </div>
+        <div className="container-fluid" id="skills">
+            <SkillsContainer />
+      </div>
+      <div className="container-fluid" id="projects">
+        
+      </div>
+      </>
     );
 }
