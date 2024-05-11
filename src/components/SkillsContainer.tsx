@@ -135,9 +135,9 @@ export const SkillsContainer: React.FC = (): JSX.Element => {
             </div>
           </div>
           { technologies.map((t: SkillBoxProps[], index: number) => {
-            return <div className={index === 0 ? "row mt-5" : "row"} key={index}>
+            return <div className={index === 0 ? "row mt-5" : "row"} key={`t-${index}`}>
                 {t.map((skill: SkillBoxProps, skillIndex: number) => {
-                    return <SkillBox key={skillIndex} skillText={skill.skillText} badgeText={skill.badgeText} color={skill.color} slotContent={skill.slotContent} alt={skill.alt} />;
+                    return <SkillBox skillText={skill.skillText} badgeText={skill.badgeText} color={skill.color} slotContent={skill.slotContent} alt={skill.alt} key={skill.skillText} />;
                 })}
             </div>
           })}
@@ -149,9 +149,9 @@ export const SkillsContainer: React.FC = (): JSX.Element => {
             </div>
           </div>
           { languages.map((t: SkillBoxProps[], index: number) => {
-            return <div className={index === 0 ? "row mt-5" : "row"} key={index}>
+            return <div className={index === 0 ? "row mt-5" : "row"} key={`l-${index}`}>
                 {t.map((skill: SkillBoxProps, skillIndex: number) => {
-                    return <SkillBox key={skillIndex} skillText={skill.skillText} badgeText={skill.badgeText} color={skill.color} slotContent={skill.slotContent} alt={skill.alt} />;
+                    return <SkillBox skillText={skill.skillText} badgeText={skill.badgeText} color={skill.color} slotContent={skill.slotContent} alt={skill.alt} key={skill.skillText} />;
                 })}
             </div>
           })}

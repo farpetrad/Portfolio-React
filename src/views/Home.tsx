@@ -5,6 +5,7 @@ import { AboutBox } from '../components/AboutBox';
 import { HeadlineBox } from '../components/HeadlineBox';
 import { ExperienceBox } from '../components/ExperienceBox';
 import { SkillsContainer } from '../components/SkillsContainer';
+import { ProjectsContainer } from '../components/ProjectsContainer';
 import './Home.scss';
 import ArrowDown from "../assets/Arrow 1.svg"
 
@@ -43,7 +44,7 @@ export const HomeView: React.FC = (): JSX.Element => {
             <SkillsContainer />
       </div>
       <div className="container-fluid" id="projects">
-        
+            <ProjectsContainer />
       </div>
       </>
     );

@@ -43,10 +43,10 @@ export const App: React.FC = (): JSX.Element => {
       <Navbar>
         {navItems.map((n: NavItemType, i: number) => { 
           return n.icon ? 
-            <NavItem href={n.href} label={n.label} key={i} >
+            <NavItem href={n.href} label={n.label} key={`navitem-${i}`} >
               <FontAwesomeIcon icon={n.icon} size="2x" />
             </NavItem> 
-            : <NavItem href={n.href} label={n.label} key={i}></NavItem>;
+            : <NavItem href={n.href} label={n.label} key={`navitem-${i}`}></NavItem>;
         })}
       </Navbar>
       

@@ -51,7 +51,7 @@ export const AboutBox: React.FC = (): JSX.Element => {
         </div>
         <div className="row">
           <div className="col-12 mt-3">
-            {skills.map((s, i) => <div className='badge rounded-pill me-2 mt-2 skill' key={i}>{s}</div>)}
+            {skills.map((s, i) => <div className='badge rounded-pill me-2 mt-2 skill' key={`${s}-${i}`}>{s}</div>)}
           </div>
         </div>
       </div>
