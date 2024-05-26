@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { ProjectBox, ProjectItemProps } from './ProjectBox';
+import { Modal } from './Modal';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 export const ProjectsContainer: React.FC = (): JSX.Element => {
     const projects: ProjectItemProps[] = [
@@ -98,9 +102,24 @@ export const ProjectsContainer: React.FC = (): JSX.Element => {
           slides: [],
         },
       ];
+
       const [selectedProject, setSelectedProject] = useState<ProjectItemProps | null>(null);
+      const headerContent = <h4>{selectedProject?.name ?? ""}</h4>
     return (
         <>
+            {selectedProject !== null && 
+              createPortal(<Modal closeInFooter={false}
+                                  closeInHeader={true}
+                                  bodyContent={
+                                  <div style={{ overflow: 'hidden' }}>
+                                    <AwesomeSlider>
+                                      {selectedProject?.slides && selectedProject.slides.map((s) => 
+                                        <div data-src={s.img} key={s.img} className='img-fluid' />
+                                      )}
+                                    </AwesomeSlider>
+                                  </div>}
+                                  headerContent={headerContent}
+                                  doClose={() => setSelectedProject(null) } />, document.body)}
             <div className="row mt-5 mb-5">
                 <div className="offset-1 col-10 text-start mt-5">
                 <h2>Featured Projects</h2>
