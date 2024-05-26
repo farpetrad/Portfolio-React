@@ -29,6 +29,8 @@ export const ContactContainer: React.FC = (): JSX.Element => {
                 setError(true);
                 setErrorMessage(JSON.stringify(error))
             });
+        } else {
+            setError(true);
         }
         
     }
@@ -50,6 +52,9 @@ export const ContactContainer: React.FC = (): JSX.Element => {
                             tabIndex={0}
                             onChange={(e) => setName(e.target.value)}
                         />
+                        {error && name.length === 0 && <div className='error-container'>
+                            <span style={{minHeight: 27 }}>Value is required</span>
+                        </div>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor="email-input" className="form-label">Email Address:</label>
@@ -62,6 +67,9 @@ export const ContactContainer: React.FC = (): JSX.Element => {
                             tabIndex={0}
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        {error && email.length === 0 && <div className='error-container'>
+                            <span style={{minHeight: 27 }}>Value is required</span>
+                        </div>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor="message-input" className="form-label">Message:</label>
@@ -73,6 +81,9 @@ export const ContactContainer: React.FC = (): JSX.Element => {
                             tabIndex={0}
                             onChange={(e) => setMessage(e.target.value)}
                         />
+                        {error && message.length === 0 && <div className='error-container'>
+                            <span style={{minHeight: 27 }}>Value is required</span>
+                        </div>}
                     </div>
                     <div className='mb-3'>
                     <button
