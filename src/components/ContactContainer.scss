@@ -1,0 +1,73 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../scss/bootstrap.scss";
+#contact {
+    min-height: 100vh;
+    background-color: #ffffff;
+    align-content: center;
+    .contact-me-container {
+      h3 {
+        color: $primary;
+        font-family: "Open Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+      form {
+        max-width: 70%;
+        input {
+          max-width: 60%;
+        }
+        label {
+          color: $primary;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+        }
+  
+        button.btn-primary {
+          background-color: $primary;
+          color: #ffffff;
+          max-width: 13rem;
+        }
+        .error-container {
+          color: red;
+          min-height: 24px;
+          text-align: left;
+        }
+      }
+      .code-container {
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+        span {
+          font-family: Consolas;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        span.number {
+          text-align: right;
+          font-family: Consolas;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        span.highlight {
+          color: #8540f5;
+        }
+        span.text {
+          color: #d98a02;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        .code-container {
+          overflow-x: hidden;
+        }
+      }
+    }
+  }
