@@ -1,0 +1,27 @@
+@import "../scss/bootstrap.scss";
+#about-me {
+    height: 100vh;
+    background: url("../assets/AboutMe.png") lightgrey;
+    align-content: center;
+  
+    .about-me-container {
+      h2 {
+        color: $primary;
+        font-family: "Open Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+      p {
+        color: $primary;
+      }
+      p.about-me-highlight {
+        font-family: "Open Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+      }
+    }
+  }

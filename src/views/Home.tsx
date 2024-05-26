@@ -6,6 +6,7 @@ import { HeadlineBox } from '../components/HeadlineBox';
 import { ExperienceBox } from '../components/ExperienceBox';
 import { SkillsContainer } from '../components/SkillsContainer';
 import { ProjectsContainer } from '../components/ProjectsContainer';
+import { AboutContainer } from '../components/AboutContainer';
 import './Home.scss';
 import ArrowDown from "../assets/Arrow 1.svg"
 
@@ -43,9 +44,10 @@ export const HomeView: React.FC = (): JSX.Element => {
         <div className="container-fluid" id="skills">
             <SkillsContainer />
       </div>
-      <div className="container-fluid" id="projects">
+      <div className="container-fluid pb-5" id="projects">
             <ProjectsContainer />
       </div>
+      <AboutContainer />
       </>
     );
 }

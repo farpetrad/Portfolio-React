@@ -132,7 +132,7 @@ export const ProjectsContainer: React.FC = (): JSX.Element => {
         {projects.map((p, index: number)=> {
             const obj = { ...p };
             obj.onProjectSelect = () => setSelectedProject(p);
-            return <div className={index === projects.length-1 ? "row mt-5 mb-5" : "row mt-5"} key={`${p.name}-${index}`}>
+            return <div className="row mt-5" key={`${p.name}-${index}`}>
                 <ProjectBox {...obj} />
             </div>
         })}
